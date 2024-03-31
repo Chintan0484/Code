@@ -7,27 +7,312 @@
     <style>
         h1{
             font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center; 
+            color: whitesmoke;
         }
         
+        nav {
+            position: absolute; /* Position the navigation bar absolutely */
+            top: 20px; /* Adjust top position as needed */
+            right: 10px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the navigation bar is above the background image */
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
+            padding: 10px; /* Padding around the navigation links */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 20px; /* Add space between list items */
+        }
+
+        a {
+            color: white; /* Text color of the navigation links */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: -20px; /* Adjust top position as needed */
+            left: -1100px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the logo is above the background image */
+            width: 280px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         #rectangle1{
             width: 200px;
             height: 100px;
             background: whitesmoke;
             position: absolute;
-            top: 10%;
-            right: 20%;
+            top: 15%;
+            left: 5%;
             opacity: 70%;
             border-radius: 5%;
             padding-left: 10%;
-            padding-right: 10%;
+            padding-right: 15%;
             padding-bottom: 10%;
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            justify-content: space-around; /* Add space around items */
+            color: black;
         }
+
+        #rectangle1 img {
+            width: 30%; /* Adjust image width as desired */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 2%;
+            left: 0%;
+        }
+
+        #rectangle1 p {
+            font-size: 160%;
+            position: absolute;
+            left: 45%;
+            text-align: center; /* Center text horizontally */
+            margin: 0;
+        }
+        #rectangle1 p:last-child {
+            position: absolute;
+            text-align: left; /* Justify the last paragraph */
+            padding: 0 10px; /* Add padding for better readability */
+            bottom: 25%;
+            left: 28%;
+        }
+        #rectangle1 a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+        #rectangle1 a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+        
+        #rectangle2{
+            width: 200px;
+            height: 100px;
+            background: whitesmoke;
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            opacity: 70%;
+            border-radius: 5%;
+            padding-left: 10%;
+            padding-right: 15%;
+            padding-bottom: 10%;
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            justify-content: space-around; /* Add space around items */
+            color: black;
+        }
+
+        #rectangle2 img {
+            width: 30%; /* Adjust image width as desired */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+
+        #rectangle2 p {
+            font-size: 160%;
+            position: absolute;
+            left: 45%;
+            text-align: center; /* Center text horizontally */
+            margin: 0;
+        }
+        #rectangle2 p:last-child {
+            position: absolute;
+            text-align:justify; /* Justify the last paragraph */
+            padding: 0 10px; /* Add padding for better readability */
+            bottom: 25%;
+            left: 28%;
+        }
+        #rectangle2 a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+        #rectangle2 a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+
+        #rectangle3{
+            width: 200px;
+            height: 100px;
+            background: whitesmoke;
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            opacity: 70%;
+            border-radius: 5%;
+            padding-left: 10%;
+            padding-right: 15%;
+            padding-bottom: 10%;
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            justify-content: space-around; /* Add space around items */
+            color: black;
+        }
+
+        #rectangle3 img {
+            width: 30%; /* Adjust image width as desired */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+
+        #rectangle3 p {
+            font-size: 160%;
+            position: absolute;
+            left: 45%;
+            text-align: center; /* Center text horizontally */
+            margin: 0;
+        }
+        #rectangle3 p:last-child {
+            position: absolute;
+            text-align:justify; /* Justify the last paragraph */
+            padding: 0 10px; /* Add padding for better readability */
+            bottom: 25%;
+            left: 28%;
+        }
+        #rectangle3 a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+        #rectangle3 a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+
+        #rectangle4{
+            width: 200px;
+            height: 100px;
+            background: whitesmoke;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            opacity: 70%;
+            border-radius: 5%;
+            padding-left: 10%;
+            padding-right: 15%;
+            padding-bottom: 10%;
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            justify-content: space-around; /* Add space around items */
+            color: black;
+        }
+
+        #rectangle4 img {
+            width: 30%; /* Adjust image width as desired */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+
+        #rectangle4 p {
+            font-size: 160%;
+            position: absolute;
+            left: 50%;
+            text-align: center; /* Center text horizontally */
+            margin: 0;
+        }
+        #rectangle4 p:last-child {
+            position: absolute;
+            text-align:justify; /* Justify the last paragraph */
+            padding: 0 10px; /* Add padding for better readability */
+            bottom: 20%;
+            left: 28%;
+        }
+        #rectangle4 a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+        #rectangle4 a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+        
+        /*scrollbar*/
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #d1e5ff;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(#642bff,#ff22e6);
+        }
+
     </style>
 </head>
 <body background="background_services.png">
-    <h1 style="text-align: center; color: whitesmoke;">Services</h1>
-    <div id="rectangle1">
-        <h1>Car Customization</h1>
-    </div>
+    <h1>Services</h1>
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="E:\All Capstone Projects\CP2\Code\index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Parts</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\About\about.html">About Us</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\sign\signin.html">Sign In</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\register\register.html">Register</a></li>
+        </ul>
+    </nav>
+    <a href="#">
+        <div id="rectangle1">
+            <img src="modification.png" alt="Car Modification">
+            <p style="font-size: 160%; text-align: center;">Car Modification</p><br>
+            <p>"Alteration of vehicle's appearance or performance for customization and enhancement."</p>
+        </div>
+    </a>
+
+    <a href="#">
+        <div id="rectangle2">
+            <img src="customization.png" alt="Car Customization">
+            <p style="font-size: 160%; text-align: center;">Car Customization</p><br>
+            <p>“Tailoring car features to personal preferences for unique individuality and performance.”</p>
+        </div>
+    </a>
+
+    <a href="#">
+        <div id="rectangle3">
+            <img src="services.png" alt="General Services">
+            <p style="font-size: 160%; text-align: center;">General Services</p><br>
+            <p>“Routine maintenance and repairs to ensure optimal car performance and longevity”</p>
+        </div>
+    </a>
+
+    <a href="#">
+        <div id="rectangle4">
+            <img src="accessories.png" alt="Accessories">
+            <p style="font-size: 160%; text-align: center;">Accessories</p><br>
+            <p>“Supplementary enhancements and features, enhancing functionality, aesthetics, and overall performance for automotive excellence."</p>
+        </div>
+    </a>
 </body>
 </html>

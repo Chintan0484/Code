@@ -16,6 +16,44 @@
             height: 100vh;
         }
 
+        nav {
+            position: absolute; /* Position the navigation bar absolutely */
+            top: 20px; /* Adjust top position as needed */
+            right: 10px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the navigation bar is above the background image */
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
+            padding: 10px; /* Padding around the navigation links */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 20px; /* Add space between list items */
+        }
+
+        a {
+            color: white; /* Text color of the navigation links */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: -20px; /* Adjust top position as needed */
+            left: -1100px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the logo is above the background image */
+            width: 280px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         .container {
             width: 300px;
             padding: 20px;
@@ -96,62 +134,84 @@
             text-decoration: underline;
         }
         .password-wrapper {
-    width: 100%;
-    position: relative;
-}
+            width: 100%;
+            position: relative;
+        }
 
-.password-wrapper input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 10px 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
+        .password-wrapper input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px 10px 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
 
-.password-wrapper img {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-}
+        .password-wrapper img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+        
+        /*scrollbar*/
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #d1e5ff;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(#642bff,#ff22e6);
+        }
+
     </style>
 </head>
 <body>
-<div class="container">
-    <form action="/login" method="post">
-        <h1>Login</h1>
-        <label for="email">Enter your email</label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <label for="password">Enter your password</label>
-        <div class="password-wrapper">
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <img id="password-visibility" src="eye-close.png" onclick="togglePasswordVisibility(this);" style="position: absolute; top: 40%; right: 35px; transform: translateY(-50%); cursor: pointer;">
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="E:\All Capstone Projects\CP2\Code\index.html" class="active">Home</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\services\services.html">Services</a></li>
+            <li><a href="">Parts</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\About\about.html">About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\register\register.html">Register</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="/login" method="post">
+            <h1>Login</h1>
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <label for="password">Enter your password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <img id="password-visibility" src="eye-close.png" onclick="togglePasswordVisibility(this);" style="position: absolute; top: 40%; right: 35px; transform: translateY(-50%); cursor: pointer;">
+            </div>
+            <br>
+            <input type="submit" value="Login Now!">
+        </form>
+        <div class="forgot-password">
+            <p><a href="forgot.html">Forgot password?</a></p>
+            <p>Don't have an account? <a href="/signup">Register Now</a></p>
         </div>
-        
-        <input type="submit" value="Login Now!">
-    </form>
-    <div class="forgot-password">
-        <p><a href="forgot.html">Forgot password?</a></p>
-        <p>Don't have an account? <a href="/signup">Register Now</a></p>
     </div>
-</div>
 
-<script>
-function togglePasswordVisibility(element) {
-var input = document.getElementById("password");
-if (input.type === "password") {
-    input.type = "text";
-    element.src = "eye-open.png";
-} else {
-    input.type = "password";
-    element.src = "eye-close.png";
-}
-}
-</script>
-
+    <script>
+    function togglePasswordVisibility(element) {
+    var input = document.getElementById("password");
+    if (input.type === "password") {
+        input.type = "text";
+        element.src = "eye-open.png";
+    } else {
+        input.type = "password";
+        element.src = "eye-close.png";
+    }
+    }
+    </script>
 </body>
 </html>

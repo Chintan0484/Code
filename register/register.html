@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpeg') center/cover no-repeat fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: blur(0px); /* Blur the background a little bit */
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.7); /* Light transparent background */
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 650px;
+            box-sizing: border-box;
+            display: grid;
+            gap: 15px;
+            position: relative;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #333; /* Dark border */
+            border-radius: 5px;
+        }
+
+        .form-container textarea {
+            resize: vertical; /* Allow vertical resizing of the textarea */
+        }
+
+        .form-container button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: rgb(1, 1, 1);
+            border: 1 solid black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+            color: azure;
+            transform: scale(1.05);
+        }
+
+        .button-animation {
+            position: absolute;
+            background: linear-gradient(90deg, #eb8241, #0a98a0);
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-container button:hover .button-animation {
+            transform: scaleX(1);
+        }
+
+        /* Add styles for validation messages */
+        .error-message {
+            color: #ff0000;
+            margin-top: 5px;
+        }
+
+        /* Positioning and styling for Google Sign-In button */
+        .g-signin2 {
+            margin-top: 2   0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Custom styling for Google Sign-In button */
+        .g-signin2 > div {
+            display: inline-block;
+            background-color: #636c69;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .g-signin2 > div:hover {
+            background-color: #d0ef08;
+        }
+    </style>
+    <!-- Include the Google Sign-In library -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Configure the client ID for Google Sign-In -->
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+</head>
+<body>
+    <form action="http://localhost:3000/register" method="post">
+    <div class="form-container">
+
+        
+        <h2>Registration</h2>
+
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required oninput="validatePhone(event)">
+        <span class="error-message" id="phone-error">Please enter a valid 10-digit phone number without special characters.</span>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required oninput="validatePassword(event)">
+        <span class="error-message" id="password-error">Password must be 8-12 characters and contain one special symbol, one number, and one uppercase letter.</span>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <span class="error-message" id="confirm-password-error">Passwords do not match.</span>
+
+        <button type="submit" onclick="validateForm()">
+            Register
+            <div class="button-animation"></div>
+        </button>
+        
+    </form>
+        
+        <!-- Add the Google Sign-In button -->
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    <script>
+        function validateForm() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            var phone = document.getElementById('phone').value;
+
+            // Password confirmation validation
+            if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').style.display = 'block';
+                return false;
+            } else {
+                document.getElementById('confirm-password-error').style.display = 'none';
+            }
+
+            // Phone number validation
+            var phoneRegex = /^[0-9]{10}$/;
+            if (!phone.match(phoneRegex)) {
+                document.getElementById('phone-error').style.display = 'block';
+                return false;
+            } else {
+                document.getElementById('phone-error').style.display = 'none';
+            }
+
+            // Additional validations can be added as needed
+
+            // If all validations pass, submit the form
+            alert('Form submitted successfully!');
+            // Uncomment the line below to submit the form programmatically
+            // document.getElementById('registration-form').submit();
+        }
+
+        function validatePhone(event) {
+            var input = event.target;
+            input.value = input.value.replace(/[^\d]/g, ''); // Remove non-numeric characters
+        }
+
+        function validatePassword(event) {
+            var password = event.target.value;
+            var passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,12}$/;
+
+            if (!password.match(passwordRegex)) {
+                document.getElementById('password-error').style.display = 'block';
+            } else {
+                document.getElementById('password-error').style.display = 'none';
+            }
+        }
+
+        // Function to handle successful Google sign-in
+        function onSignIn(googleUser) {
+            // Get user profile information
+            var profile = googleUser.getBasicProfile();
+            // Example: Retrieve user's name and email
+            var name = profile.getName();
+            var email = profile.getEmail();
+            // You can handle this data as needed, such as sending it to your server for registration.
+            alert('Signed in with Google: ' + name + ' (' + email + ')');
+            // Check if the user's email is registered with Google
+            // If yes, submit the form
+            var form = document.querySelector('.form-container');
+            var emailInput = document.getElementById('email');
+            if (emailInput.value === email) {
+                form.submit();
+            }
+        }
+    </script>
+</body>
+</html>

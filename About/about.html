@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>about us</title>
+    <title>About us</title>
     <style>
         body{
             margin: 0;
@@ -15,9 +15,10 @@
             background-color: black;
             background-size: cover;
         }
+         
         nav {
             position: absolute; /* Position the navigation bar absolutely */
-            top: 10px; /* Adjust top position as needed */
+            top: 20px; /* Adjust top position as needed */
             right: 10px; /* Adjust left position as needed */
             z-index: 2; /* Ensure the navigation bar is above the background image */
             background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
@@ -34,21 +35,25 @@
             display: inline; /* Display list items horizontally */
             margin-right: 20px; /* Add space between list items */
         }
+
         a {
             color: white; /* Text color of the navigation links */
             text-decoration: none; /* Remove underline from links */
         }
+
         a:hover {
             text-decoration: underline; /* Add underline on hover */
         }
+
         .logo {
             position: absolute; /* Position the logo absolutely */
-            top: -10px; /* Adjust top position as needed */
-            left: -1050px; /* Adjust left position as needed */
+            top: -20px; /* Adjust top position as needed */
+            left: -1100px; /* Adjust left position as needed */
             z-index: 2; /* Ensure the logo is above the background image */
-            width: 300px; /* Set the width of the logo */
+            width: 280px; /* Set the width of the logo */
             height: auto; /* Maintain aspect ratio */
         }
+        
         p {
             font-family: 'Rochester', sans-serif;
             position: absolute;
@@ -272,6 +277,20 @@
         ::-webkit-scrollbar-thumb{
             background: linear-gradient(#642bff,#ff22e6);
         }
+
+        #info h1{
+            position: absolute;
+            top: 5%;   
+            right:5%;
+            color: azure;
+        }
+        #info p{
+            font-size: 110%;
+            position: absolute;
+            top: 12%;
+            left: 79%;
+            color: white;
+        }
         
     </style>
 </head>
@@ -285,9 +304,14 @@
             <li><a href="#">Parts</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="E:\All Capstone Projects\CP2\Code\sign\signin.html">Sign In</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\register\register.html">Register</a></li>
         </ul>
     </nav>
+    <div id="info">
+        <h1>Company Owners</h1>
+        <p>Dev Vachhani<br>Chintan Goswami<br>Sagar Bheda<br>Bhargav Dodiya</p>
+    </div>
+
     <section class="empty-frame">
         
           <div class="background-rect"></div>

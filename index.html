@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <style>
@@ -23,10 +24,10 @@
             left: 0;
             z-index: -1; /* Set z-index to -1 to ensure it's behind the content */
         }
-
+ 
         nav {
             position: absolute; /* Position the navigation bar absolutely */
-            top: 10px; /* Adjust top position as needed */
+            top: 20px; /* Adjust top position as needed */
             right: 10px; /* Adjust left position as needed */
             z-index: 2; /* Ensure the navigation bar is above the background image */
             background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
@@ -52,13 +53,13 @@
         a:hover {
             text-decoration: underline; /* Add underline on hover */
         }
-        
+
         .logo {
             position: absolute; /* Position the logo absolutely */
-            top: -10px; /* Adjust top position as needed */
+            top: -20px; /* Adjust top position as needed */
             left: -1100px; /* Adjust left position as needed */
             z-index: 2; /* Ensure the logo is above the background image */
-            width: 300px; /* Set the width of the logo */
+            width: 280px; /* Set the width of the logo */
             height: auto; /* Maintain aspect ratio */
         }
 
@@ -122,6 +123,17 @@
                 opacity: 1;
             }
         }
+
+        /*scrollbar*/
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #d1e5ff;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(#642bff,#ff22e6);
+        }
     </style>
 </head>
 <body>
@@ -132,10 +144,10 @@
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="services/services.html">Services</a></li>
-            <li><a href="#">Parts</a></li>
+            <li><a href="">Parts</a></li>
             <li><a href="About/about.html">About Us</a></li>
             <li><a href="sign/signin.html">Sign In</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="register/register.html">Register</a></li>
         </ul>
     </nav>
     <section class="empty-frame">
