@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>about us</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rochester' sans-serif;
+            background-color: black;
+            background-size: cover;
+        }
+        nav {
+            position: absolute; /* Position the navigation bar absolutely */
+            top: 10px; /* Adjust top position as needed */
+            right: 10px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the navigation bar is above the background image */
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
+            padding: 10px; /* Padding around the navigation links */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 20px; /* Add space between list items */
+        }
+        a {
+            color: white; /* Text color of the navigation links */
+            text-decoration: none; /* Remove underline from links */
+        }
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: -10px; /* Adjust top position as needed */
+            left: -1050px; /* Adjust left position as needed */
+            z-index: 2; /* Ensure the logo is above the background image */
+            width: 300px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        p {
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 300px;
+            left: 80px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p1{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 800px;
+            left: 800px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p2{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 1250px;
+            left: 80px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p3{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 1675px;
+            left: 800px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p4{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 2100px;
+            left: 80px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p5{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 2550px;
+            left: 800px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        p6{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 3000px;
+            left: 80px;
+            font-size: 25px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h2{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 200px;
+            left: 80px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h3{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 650px;
+            left: 800px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h4{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 1100px;
+            left: 80px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h5{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 1500px;
+            left: 800px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h6{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 1900px;
+            left: 80px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h7{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 2450px;
+            left: 800px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        h8{
+            font-family: 'Rochester', sans-serif;
+            position: absolute;
+            top: 2900px;
+            left: 80px;
+            font-size: 50px;
+            color: wheat;
+            line-height: 2;
+            text-align: justify;
+        }
+        
+        .inner-frames-icon {
+            position: absolute;
+            top: 250px;
+            left: 800px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon1 {
+            position: absolute;
+            top: 700px;
+            left: 80px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon2 {
+            position: absolute;
+            top: 1150px;
+            left: 800px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon3 {
+            position: absolute;
+            top: 1575px;
+            left: 80px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon4 {
+            position: absolute;
+            top: 2030px;
+            left: 800px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon5 {
+            position: absolute;
+            top: 2450px;
+            left: 80px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        .inner-frames-icon6 {
+            position: absolute;
+            top: 2870px;
+            left: 800px;
+            border-radius: 29px;
+            width: 600px;
+            height: 414px;
+            object-fit: cover;
+            z-index: 2;
+        }
+        
+
+        /*scrollbar*/
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #d1e5ff;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(#642bff,#ff22e6);
+        }
+        
+    </style>
+</head>
+<body style="background-color:rgba(0, 0, 0, 0.86);">
+    
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="E:\All Capstone Projects\CP2\Code\index.html" class="active">Home</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\services\services.html">Services</a></li>
+            <li><a href="#">Parts</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="E:\All Capstone Projects\CP2\Code\sign\signin.html">Sign In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+    <section class="empty-frame">
+        
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon"
+            loading="lazy"
+            alt=""
+            src="w.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon1"
+            loading="lazy"
+            alt=""
+            src="ppf.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon2"
+            loading="lazy"
+            alt=""
+            src="c.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon3"
+            loading="lazy"
+            alt=""
+            src="a.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon4"
+            loading="lazy"
+            alt=""
+            src="b.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon5"
+            loading="lazy"
+            alt=""
+            src="v.png"
+          />
+          <div class="background-rect"></div>
+          <img
+            class="inner-frames-icon6"
+            loading="lazy"
+            alt=""
+            src="x.png"
+          />
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="flex">
+                    <h2>About Us</h2>
+                    <h3>Our Mission</h3>
+                    <h4>Expertise and Experience</h4>
+                    <h5>Commitment to Quality</h5>
+                    <h6>Customer Satisfaction</h6>
+                    <h7>Community and Culture</h7>
+                    <h8>Get in Touch</h8>
+                    
+                    
+                    <p> At EXOTIC MOTORS, we are passionate about cars. We believe<br>
+                        that your vehicle is not just a means of transportation but<br> 
+                        an expression of your personality and style. That's why we<br> 
+                        specialize in providing top-notch customization and modification<br> 
+                        services to turn your car dreams into reality.</p>
+
+                        <p1>Our mission is simple: to empower car enthusiasts like you<br> 
+                            to transform your vehicles into unique masterpieces.<br> 
+                            Whether you're looking to enhance performance, improve<br>  
+                            aesthetics, or add personalized touches, we're here to<br>  
+                            make it happen.</p1>
+
+                        <p2>With over 2 years of experience in the automotive<br> 
+                            industry, our team of skilled technicians and designers brings<br>
+                            a wealth of expertise to every project. From classic restorations<br> 
+                            to cutting-edge upgrades, we've got the knowledge and know<br> 
+                            -how to deliver exceptional results.</p2>
+
+                        <p3>At EXOTIC MOTORS, quality is our top priority. We go<br> 
+                            above and beyond to ensure that every customization<br> 
+                            and modificationmeets the highest standards of <br> 
+                            craftsmanship and durability.From using premium <br> 
+                            materials to employing advanced techniques,we <br>
+                            leave no stone unturned in our pursuit of excellence.</p3>
+
+                        <p4>Your satisfaction is our ultimate goal. We take the<br> 
+                            time to listen to your needs, understand your vision,<br> 
+                            and work closely with you throughout the entire<br> 
+                            customization process. Our friendly and knowledgeable<br> 
+                            staff are always here to answer your questions, address<br>
+                            your concerns, and exceed your expectations.</p4>
+
+                        <p5>We're more than just a car customization shop –<br> 
+                            we're a community of passionate enthusiasts<br> 
+                            united by our love for cars. Whether you're a<br> 
+                            seasoned gearhead or a newcomer to the scene,<br> 
+                            you'll find a warm welcome and a shared sense<br> 
+                            of camaraderie at EXOTIC MOTORS.</p5>
+
+                        <p6>Ready to take your ride to the next level? Contact<br> 
+                            us today to schedule a consultation and discover what<br> 
+                            EXOTIC MOTORS can do for you. Let's work together to<br> 
+                            make your automotive dreams a reality!</p6>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

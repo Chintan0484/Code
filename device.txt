@@ -1,0 +1,19 @@
+
+
+        /* CSS for medium devices like tablets 
+        @media only screen and (max-width: 768px) {
+            body {
+                background-image: url('background.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        /* CSS for small devices like phones 
+        @media only screen and (max-width: 480px) {
+            body {
+                background-image: url('background.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }*/
