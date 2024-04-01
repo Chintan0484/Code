@@ -6,7 +6,7 @@
         body {
             background-image: url('wp11814479.jpg');
             background-repeat: no-repeat;
-            background-size: cover; /* Ensure the background image covers the entire webpage */
+            background-size: cover;
             background-position: center;
             position: relative;
             margin: 0;
@@ -57,9 +57,9 @@
         .container {
             width: 300px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Added transparency for better visibility */
+            background-color: rgba(255, 255, 255, 0.7);
             box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
-            border-radius: 10px; /* Rounded corners for the form container */
+            border-radius: 10px;
         }
 
         .container h1 {
@@ -75,7 +75,7 @@
         .container input[type="email"],
         .container input[type="password"] {
             width: calc(100% - 20px);
-            padding: 8px 10px 8px 10px; /* Adjusted padding for the input fields */
+            padding: 8px 10px 8px 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 10px;
@@ -90,7 +90,7 @@
 
         .container input[type="password"] img {
             position: absolute;
-            right: 10px; /* Positioned to the right side */
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
@@ -134,84 +134,74 @@
             text-decoration: underline;
         }
         .password-wrapper {
-            width: 100%;
-            position: relative;
-        }
+    width: 100%;
+    position: relative;
+}
 
-        .password-wrapper input {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 8px 10px 8px 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
+.password-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 
-        .password-wrapper img {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-        }
-        
-        /*scrollbar*/
-        ::-webkit-scrollbar{
-            width: 15px;
-        }
-        ::-webkit-scrollbar-track{
-            background: #d1e5ff;
-        }
-        ::-webkit-scrollbar-thumb{
-            background: linear-gradient(#642bff,#ff22e6);
-        }
-
+.password-wrapper img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
     </style>
 </head>
 <body>
     <nav>
         <img src="logo.png" alt="Logo" class="logo">
         <ul>
-            <li><a href="E:\All Capstone Projects\CP2\Code\index.html" class="active">Home</a></li>
-            <li><a href="E:\All Capstone Projects\CP2\Code\services\services.html">Services</a></li>
-            <li><a href="">Parts</a></li>
-            <li><a href="E:\All Capstone Projects\CP2\Code\About\about.html">About Us</a></li>
-            <li><a href="signin.html">Sign In</a></li>
-            <li><a href="E:\All Capstone Projects\CP2\Code\register\register.html">Register</a></li>
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/services/services.html">Services</a></li>
+            <li><a href="#">Parts</a></li>
+            <li><a href="/About/about.html">About Us</a></li>
+            <li><a href="/sign/signin.html">Sign In</a></li>
+            <li><a href="/register/register.html">Register</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <form action="/login" method="post">
-            <h1>Login</h1>
-            <label for="email">Enter your email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <label for="password">Enter your password</label>
-            <div class="password-wrapper">
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <img id="password-visibility" src="eye-close.png" onclick="togglePasswordVisibility(this);" style="position: absolute; top: 40%; right: 35px; transform: translateY(-50%); cursor: pointer;">
-            </div>
-            <br>
-            <input type="submit" value="Login Now!">
-        </form>
-        <div class="forgot-password">
-            <p><a href="forgot.html">Forgot password?</a></p>
-            <p>Don't have an account? <a href="/signup">Register Now</a></p>
-        </div>
-    </div>
 
-    <script>
-    function togglePasswordVisibility(element) {
-    var input = document.getElementById("password");
-    if (input.type === "password") {
-        input.type = "text";
-        element.src = "eye-open.png";
-    } else {
-        input.type = "password";
-        element.src = "eye-close.png";
-    }
-    }
-    </script>
+<div class="container">
+    <form action="/login" method="post">
+        <h1>Login</h1>
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <label for="password">Enter your password</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <img id="password-visibility" src="eye-close.png" onclick="togglePasswordVisibility(this);" style="position: absolute; top: 40%; right: 35px; transform: translateY(-50%); cursor: pointer;">
+        </div>
+        
+        <input type="submit" value="Login Now!">
+    </form>
+    <div class="forgot-password">
+        <p><a href="forgot.html">Forgot password?</a></p>
+        <p>Don't have an account? <a href="/signup">Register Now</a></p>
+    </div>
+</div>
+
+<script>
+function togglePasswordVisibility(element) {
+var input = document.getElementById("password");
+if (input.type === "password") {
+    input.type = "text";
+    element.src = "eye-open.png";
+} else {
+    input.type = "password";
+    element.src = "eye-close.png";
+}
+}
+</script>
+
 </body>
 </html>
