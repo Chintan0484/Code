@@ -11,6 +11,7 @@ html, body{
     width: 100%;
     color: white !important;
     background-color: #4e51fd;
+    margin-top: 100px;
 }
 
 .btn-sz-primary:hover{
