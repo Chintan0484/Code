@@ -90,6 +90,16 @@
         .otp{
             margin-top:20px;
             margin-right:315px;
+            font-size: 25px;
+        }
+
+
+        .your-otp{
+            margin-bottom: 10px;
+            margin-top:20%;
+            font-size: 25px;
+            line-height: 1.4;
+            letter-spacing: 3px;
         }
 
         .form-control{
@@ -172,7 +182,7 @@
                 <h2 class="main-text pt-sm-5 mt-5">Forgot <br> Your Password</h2>
                 <!-- Change action to reset.html -->
                 <form action="reset.html">
-                    <input type="email" name="email" placeholder="Enter Your E-mail" class="form-control main-input mt-5">
+                    <input type="email" name="email" placeholder="Enter Your E-mail" class="form-control main-input mt-4">
                     <div class="row mt-4">
                         <div class="col-6">
                             <button class="btn btn-sz-primary" type="submit">Send OTP</button>
@@ -182,8 +192,9 @@
                             <a href="signin.html" class="btn-back-to-login">Back To Login</a>
                         </div>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mt-6"> <!-- Adjusted margin for 2 line spacing -->
                         <div class="col-12">
+                            <h2 class="your-otp pt-sm-5 mt-1">Enter<br> Your OTP</h2>
                             <!-- Include the OTP form here -->
                             <form action="#">
                                 <div class="input-field">
@@ -192,10 +203,10 @@
                                     <input type="tel" disabled />
                                     <input type="tel" disabled />
                                 </div>
-                                <button class="otp">Verify OTP</button>
                             </form>
                         </div>
                     </div>
+                    
                 </form>
             </div>
         </div>
@@ -233,3 +244,5 @@
     </script>
 </body>
 </html>
+
+
