@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            background-image: url('EP.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; /* Ensure the background image covers the entire webpage */
+            background-position: center;
+            position: relative;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            height: 450px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Added transparency for better visibility */
+            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners for the form container */
+        }
+
+        .container {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    }
+
+    input[type="text"],  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    }
+
+    input[type="mobilenumber"],  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    input[type="submit"]:hover {
+    background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Your Profile</h1>
+        <form action="#" method="post">
+
+            <a href="p.html" class="updateprofile"></a>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="Name" required><br><br>
+
+            <label for="mobilenumber">Mobile Number:</label>
+            <input type="mobilenumber" id="mobilenumber" name="mobilenumber" value="Mobile Number" required><br><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50">Address</textarea><br><br>
+            
+            <input type="submit" value="Update Profile" class="updateprofile">
+        </form>
+    </div>
+</body>
+</html>
