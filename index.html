@@ -7,134 +7,148 @@
     <link rel="icon" type="image/x-icon" href="logo.png">
     <style>
         /* CSS for large devices like laptops and desktops */
-        body {
-            margin: 0;
-            padding: 0;
-            position: relative; /* Set position to relative */
-            min-height: 100vh; /* Ensure the background covers the entire viewport height */
-        }
+        /* CSS for large devices like laptops and desktops */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Set position to relative */
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+}
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            position: relative; /* Position the image absolutely */
-            background-repeat: no-repeat;
-            background-size: cover;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Set z-index to -1 to ensure it's behind the content */
-        }
- 
-        nav {
-            position: absolute; /* Position the navigation bar absolutely */
-            top: 20px; /* Adjust top position as needed */
-            right: 10px; /* Adjust left position as needed */
-            z-index: 2; /* Ensure the navigation bar is above the background image */
-            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
-            padding: 10px; /* Padding around the navigation links */
-        }
+.profile {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px; /* Add margin to separate profile icon from other links */
+}
 
-        ul {
-            list-style-type: none; /* Remove default bullet points */
-            margin: 0;
-            padding: 0;
-        }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative; /* Position the image absolutely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Set z-index to -1 to ensure it's behind the content */
+}
 
-        li {
-            display: inline; /* Display list items horizontally */
-            margin-right: 20px; /* Add space between list items */
-        }
+nav {
+    position: absolute; /* Position the navigation bar absolutely */
+    top: 20px; /* Adjust top position as needed */
+    right: 10px; /* Adjust left position as needed */
+    z-index: 2; /* Ensure the navigation bar is above the background image */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
+    padding: 10px; /* Padding around the navigation links */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+}
 
-        a {
-            color: white; /* Text color of the navigation links */
-            text-decoration: none; /* Remove underline from links */
-        }
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for layout */
+}
 
-        a:hover {
-            text-decoration: underline; /* Add underline on hover */
-        }
+li {
+    margin-right: 20px; /* Add equal space between list items */
+}
 
-        .logo {
-            position: absolute;
-            top: -20px;
-            left: -1100px; /* Adjust left position as needed */
-            z-index: 2; /* Ensure the logo is above the background image */
-            width: 280px; /* Set the width of the logo */
-            height: auto; /* Maintain aspect ratio */
-        }
+a {
+    color: white; /* Text color of the navigation links */
+    text-decoration: none; /* Remove underline from links */
+}
 
-        .inner-frames-icon {
-            position: absolute;
-            top: 0;
-            left: 37px;
-            border-radius: 29px;
-            width: 600px;
-            height: 414px;
-            object-fit: cover;
-            z-index: 2;
-        }
-    
-        .background-rect {
-            position: absolute;
-            top: 380px;
-            left: 760px;
-            border-radius: 25px;
-            background-color: #233132;
-            width: 674px;
-            height: 419px;
-            z-index: 1;
-        }
-        .inner-frames-icon {
-            position: absolute;
-            top: 350px;
-            left: 800px;
-            border-radius: 29px;
-            width: 600px;
-            height: 414px;
-            object-fit: cover;
-            z-index: 2;
-        }
-        p {
-            font-family: 'Rochester', sans-serif;
-            position: absolute;
-            top: 450px;
-            left: 80px;
-            font-size: 25px;
-            color: wheat;
-            line-height: 2;
-            text-align: justify;
-        }
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
 
-        .fadeIn1 {
-            opacity: 0;
-            animation: fadeInAnimation 10s ease forwards;
-        }
+.logo {
+    position: absolute;
+    top: -20px;
+    left: -1100px; /* Adjust left position as needed */
+    z-index: 2; /* Ensure the logo is above the background image */
+    width: 280px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
 
-        .fadeIn {
-            opacity: 0;
-            animation: fadeInAnimation 15s ease forwards;
-        }
+.inner-frames-icon {
+    position: absolute;
+    top: 0;
+    left: 37px;
+    border-radius: 29px;
+    width: 600px;
+    height: 414px;
+    object-fit: cover;
+    z-index: 2;
+}
 
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+.background-rect {
+    position: absolute;
+    top: 380px;
+    left: 760px;
+    border-radius: 25px;
+    background-color: #233132;
+    width: 674px;
+    height: 419px;
+    z-index: 1;
+}
 
-        /*scrollbar*/
-        ::-webkit-scrollbar{
-            width: 15px;
-        }
-        ::-webkit-scrollbar-track{
-            background: #d1e5ff;
-        }
-        ::-webkit-scrollbar-thumb{
-            background: linear-gradient(#642bff,#ff22e6);
-        }
+.inner-frames-icon {
+    position: absolute;
+    top: 350px;
+    left: 800px;
+    border-radius: 29px;
+    width: 600px;
+    height: 414px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+p {
+    font-family: 'Rochester', sans-serif;
+    position: absolute;
+    top: 450px;
+    left: 80px;
+    font-size: 25px;
+    color: wheat;
+    line-height: 2;
+    text-align: justify;
+}
+
+.fadeIn1 {
+    opacity: 0;
+    animation: fadeInAnimation 10s ease forwards;
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeInAnimation 15s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#642bff, #ff22e6);
+}
+
     </style>
 </head>
 <body>
@@ -149,6 +163,7 @@
             <li><a href="/About/about.html">About Us</a></li>
             <li><a href="/sign/signin.html">Sign In</a></li>
             <li><a href="/register/register.html">Register</a></li>
+            <li><a href="\profilepage\profile.html"><img src="profile.png" alt="profile" class="profile" /></a></li>
         </ul>
     </nav>
     <section class="empty-frame">
