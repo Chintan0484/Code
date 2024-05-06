@@ -17,30 +17,38 @@
             height: 100vh;
         }
 
+        .profile {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px; /* Add margin to separate profile icon from other links */
+}
+
         nav {
-            position: absolute; /* Position the navigation bar absolutely */
-            top: 20px; /* Adjust top position as needed */
-            right: 10px; /* Adjust left position as needed */
-            z-index: 2; /* Ensure the navigation bar is above the background image */
-            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
-            padding: 10px; /* Padding around the navigation links */
-        }
+    position: absolute; /* Position the navigation bar absolutely */
+    top: 20px; /* Adjust top position as needed */
+    right: 10px; /* Adjust left position as needed */
+    z-index: 2; /* Ensure the navigation bar is above the background image */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color for better contrast */
+    padding: 10px; /* Padding around the navigation links */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+}
 
-        ul {
-            list-style-type: none; /* Remove default bullet points */
-            margin: 0;
-            padding: 0;
-        }
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for layout */
+}
 
-        li {
-            display: inline; /* Display list items horizontally */
-            margin-right: 20px; /* Add space between list items */
-        }
+li {
+    margin-right: 20px; /* Add equal space between list items */
+}
 
-        a {
-            color: white; /* Text color of the navigation links */
-            text-decoration: none; /* Remove underline from links */
-        }
+a {
+    color: white; /* Text color of the navigation links */
+    text-decoration: none; /* Remove underline from links */
+}
 
         a:hover {
             text-decoration: underline; /* Add underline on hover */
@@ -159,6 +167,7 @@
 }
 
 
+
     </style>
 </head>
 <body>
@@ -171,6 +180,7 @@
             <li><a href="/About/about.html">About Us</a></li>
             <li><a href="/sign/signin.html">Sign In</a></li>
             <li><a href="/register/register.html">Register</a></li>
+            <li><a href="/profilepage/profile.html"><img src="profile.png" alt="profile" class="profile" /></a></li>
         </ul>
     </nav>
 
